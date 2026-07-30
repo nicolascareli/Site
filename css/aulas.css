@@ -1,0 +1,1938 @@
+/* ==================================================
+   PÁGINA DE AULAS
+================================================== */
+
+:root {
+    --aulas-fundo: #080808;
+    --aulas-fundo-secundario: #111111;
+    --aulas-texto: #ffffff;
+    --aulas-texto-suave: #b8b8b8;
+    --aulas-dourado: #caa76a;
+    --aulas-dourado-claro: #e0c28e;
+    --aulas-borda: rgba(255, 255, 255, 0.12);
+}
+
+
+/* ==================================================
+   NAVBAR
+================================================== */
+
+.navbar-aulas {
+    position: sticky;
+    top: 0;
+    z-index: 1050;
+    width: 100%;
+    padding: 18px 0;
+    background: rgba(11, 11, 15, 0.85);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-bottom: 1px solid rgba(255, 255, 255, .08);
+    transition: all .3s ease;
+}
+
+.navbar-aulas .navbar-brand {
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 900;
+    letter-spacing: 0.12em;
+}
+
+.navbar-aulas .nav-link {
+    margin-left: 18px;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.82rem;
+    font-weight: 600;
+}
+
+.navbar-aulas .nav-link:hover,
+.navbar-aulas .nav-link.active {
+    color: var(--aulas-dourado-claro);
+}
+
+
+/* ==================================================
+   HERO
+================================================== */
+
+.hero-aulas {
+    position: relative;
+    overflow: hidden;
+    min-height: 100vh;
+    background: radial-gradient( circle at 80% 35%, rgba(202, 167, 106, 0.15), transparent 35%), linear-gradient( 135deg, #050505 0%, #111111 55%, #080808 100%);
+}
+
+.hero-aulas::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45%;
+    height: 100%;
+    content: "";
+    opacity: 0.3;
+    background-image: linear-gradient( rgba(255, 255, 255, 0.025) 1px, transparent 1px), linear-gradient( 90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+    background-size: 50px 50px;
+}
+
+.hero-aulas .container {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-aulas-etiqueta {
+    display: inline-block;
+    margin-bottom: 22px;
+    color: var(--aulas-dourado-claro);
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+}
+
+.hero-aulas-titulo {
+    max-width: 680px;
+    margin-bottom: 24px;
+    color: var(--aulas-texto);
+    font-size: clamp(2.7rem, 5vw, 5.4rem);
+    font-weight: 800;
+    line-height: 1.02;
+    letter-spacing: -0.055em;
+}
+
+.hero-aulas-titulo span {
+    color: var(--aulas-dourado-claro);
+}
+
+.hero-aulas-texto {
+    max-width: 620px;
+    margin-bottom: 34px;
+    color: var(--aulas-texto-suave);
+    font-size: 1.05rem;
+    line-height: 1.75;
+}
+
+.hero-aulas-botoes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-bottom: 36px;
+}
+
+.btn-aulas-principal,
+.btn-aulas-secundario {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 54px;
+    padding: 0 26px;
+    border-radius: 999px;
+    font-size: 0.82rem;
+    font-weight: 800;
+    text-decoration: none;
+    transition: transform 0.25s ease, background 0.25s ease, color 0.25s ease;
+}
+
+.btn-aulas-principal {
+    color: #111111;
+    background: var(--aulas-dourado-claro);
+}
+
+.btn-aulas-principal:hover {
+    color: #111111;
+    background: #f0d19a;
+    transform: translateY(-3px);
+}
+
+.btn-aulas-secundario {
+    color: #ffffff;
+    border: 1px solid var(--aulas-borda);
+    background: rgba(255, 255, 255, 0.04);
+}
+
+.btn-aulas-secundario:hover {
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-3px);
+}
+
+.hero-aulas-beneficios {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.hero-aulas-beneficios span {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #d0d0d0;
+    font-size: 0.78rem;
+    font-weight: 600;
+}
+
+.hero-aulas-beneficios i {
+    color: var(--aulas-dourado);
+}
+
+
+/* ==================================================
+   IMAGEM
+================================================== */
+
+.hero-aulas-imagem {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    min-height: 680px;
+}
+
+.hero-aulas-imagem img {
+    position: relative;
+    z-index: 2;
+    display: block;
+    width: 100%;
+    max-width: 600px;
+    max-height: 700px;
+    object-fit: contain;
+    object-position: bottom center;
+    filter: drop-shadow(0 30px 45px rgba(0, 0, 0, 0.45));
+}
+
+.hero-aulas-imagem::before {
+    position: absolute;
+    z-index: 1;
+    width: 440px;
+    height: 440px;
+    content: "";
+    border: 1px solid rgba(202, 167, 106, 0.25);
+    border-radius: 50%;
+    background: radial-gradient( circle, rgba(202, 167, 106, 0.2), transparent 68%);
+}
+
+.hero-aulas-experiencia {
+    position: absolute;
+    z-index: 3;
+    right: 10px;
+    bottom: 80px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    max-width: 220px;
+    padding: 18px 22px;
+    border: 1px solid var(--aulas-borda);
+    border-radius: 18px;
+    background: rgba(10, 10, 10, 0.7);
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(14px);
+}
+
+.hero-aulas-experiencia strong {
+    color: var(--aulas-dourado-claro);
+    font-size: 2rem;
+    font-weight: 900;
+}
+
+.hero-aulas-experiencia span {
+    color: #ffffff;
+    font-size: 0.73rem;
+    font-weight: 700;
+    line-height: 1.3;
+    text-transform: uppercase;
+}
+
+
+/* ==================================================
+   FORMAS DE APRENDER
+================================================== */
+
+.formas-aprender {
+    position: relative;
+    padding: 120px 0;
+    background: #f4f1eb;
+}
+
+.formas-cabecalho {
+    max-width: 720px;
+    margin: 0 auto 60px;
+    text-align: center;
+}
+
+.secao-etiqueta {
+    display: inline-block;
+    margin-bottom: 16px;
+    color: #9a7640;
+    font-size: 0.73rem;
+    font-weight: 800;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+}
+
+.formas-cabecalho h2 {
+    margin-bottom: 20px;
+    color: #111111;
+    font-size: clamp(2.2rem, 4vw, 4rem);
+    font-weight: 800;
+    line-height: 1.08;
+    letter-spacing: -0.045em;
+}
+
+.formas-cabecalho p {
+    margin: 0;
+    color: #686868;
+    font-size: 1rem;
+    line-height: 1.75;
+}
+
+.forma-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    min-height: 490px;
+    padding: 36px;
+    overflow: hidden;
+    border: 1px solid rgba(17, 17, 17, 0.1);
+    border-radius: 26px;
+    background: rgba(255, 255, 255, 0.76);
+    box-shadow: 0 20px 45px rgba(17, 17, 17, 0.07);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.forma-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(154, 118, 64, 0.35);
+    box-shadow: 0 28px 55px rgba(17, 17, 17, 0.12);
+}
+
+.forma-card-destaque {
+    color: #ffffff;
+    border-color: rgba(202, 167, 106, 0.35);
+    background: radial-gradient( circle at 90% 10%, rgba(202, 167, 106, 0.2), transparent 35%), #111111;
+}
+
+.forma-card-em-breve {
+    color: #ffffff;
+    border-color: rgba(202, 167, 106, 0.35);
+    background: radial-gradient( circle at 90% 10%, rgba(202, 167, 106, 0.2), transparent 35%), #1d1400;
+}
+
+.forma-icone {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 58px;
+    height: 58px;
+    margin-bottom: 26px;
+    color: #9a7640;
+    border: 1px solid rgba(154, 118, 64, 0.2);
+    border-radius: 18px;
+    background: rgba(202, 167, 106, 0.1);
+}
+
+.forma-icone i {
+    font-size: 1.55rem;
+}
+
+.forma-card-destaque .forma-icone {
+    color: var(--aulas-dourado-claro);
+    border-color: rgba(202, 167, 106, 0.28);
+    background: rgba(202, 167, 106, 0.12);
+}
+
+.forma-status {
+    position: absolute;
+    top: 36px;
+    right: 36px;
+    color: #8b6b3b;
+    font-size: 0.65rem;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.forma-card-destaque .forma-status {
+    color: var(--aulas-dourado-claro);
+}
+
+.forma-card h3 {
+    margin-bottom: 18px;
+    color: #111111;
+    font-size: 1.55rem;
+    font-weight: 800;
+    letter-spacing: -0.035em;
+}
+
+.forma-card-destaque h3 {
+    color: #ffffff;
+}
+
+.forma-card-em-breve h3 {
+    color: #ffffff;
+}
+
+.forma-card>p {
+    margin-bottom: 24px;
+    color: #686868;
+    font-size: 0.93rem;
+    line-height: 1.75;
+}
+
+.forma-card-destaque>p {
+    color: #bcbcbc;
+}
+
+.forma-card-em-breve>p {
+    color: #bcbcbc;
+}
+
+.forma-card ul {
+    display: grid;
+    gap: 13px;
+    margin: 0 0 30px;
+    padding: 0;
+    list-style: none;
+}
+
+.forma-card li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #4f4f4f;
+    font-size: 0.82rem;
+    font-weight: 600;
+}
+
+.forma-card-destaque li {
+    color: #d4d4d4;
+}
+
+.forma-card-em-breve li {
+    color: #d4d4d4;
+}
+
+.forma-card li i {
+    color: #9a7640;
+    font-size: 1rem;
+}
+
+.forma-card-destaque li i {
+    color: var(--aulas-dourado-claro);
+}
+
+.forma-card-em-breve li i {
+    color: var(--aulas-dourado-claro);
+}
+
+.forma-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    width: fit-content;
+    margin-top: auto;
+    color: #111111;
+    font-size: 0.78rem;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.forma-card-destaque .forma-link {
+    color: var(--aulas-dourado-claro);
+}
+
+.forma-card-em-breve .forma-link {
+    color: var(--aulas-dourado-claro);
+}
+
+.forma-link i {
+    transition: transform 0.25s ease;
+}
+
+.forma-link:hover i {
+    transform: translateX(5px);
+}
+
+
+/* ==================================================
+   PARA QUEM SÃO AS AULAS
+================================================== */
+
+.publico-aulas {
+    position: relative;
+    padding: 120px 0;
+    overflow: hidden;
+    background: radial-gradient( circle at 15% 20%, rgba(202, 167, 106, 0.08), transparent 30%), #0b0b0b;
+}
+
+.publico-aulas-titulo {
+    max-width: 680px;
+    margin: 0;
+    color: #ffffff;
+    font-size: clamp(2.2rem, 4vw, 4rem);
+    font-weight: 800;
+    line-height: 1.08;
+    letter-spacing: -0.045em;
+}
+
+.publico-aulas-intro {
+    max-width: 520px;
+    margin: 0 0 8px auto;
+    color: #a9a9a9;
+    font-size: 0.98rem;
+    line-height: 1.8;
+}
+
+.publico-card {
+    position: relative;
+    height: 100%;
+    min-height: 350px;
+    padding: 32px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 24px;
+    background: rgba(255, 255, 255, 0.035);
+    transition: transform 0.3s ease, border-color 0.3s ease, background 0.3s ease;
+}
+
+.publico-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(202, 167, 106, 0.4);
+    background: rgba(255, 255, 255, 0.06);
+}
+
+.publico-numero {
+    position: absolute;
+    top: 26px;
+    right: 28px;
+    color: rgba(255, 255, 255, 0.13);
+    font-size: 2.8rem;
+    font-weight: 900;
+    line-height: 1;
+}
+
+.publico-icone {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 58px;
+    height: 58px;
+    margin-bottom: 54px;
+    color: var(--aulas-dourado-claro);
+    border: 1px solid rgba(202, 167, 106, 0.25);
+    border-radius: 18px;
+    background: rgba(202, 167, 106, 0.1);
+}
+
+.publico-icone i {
+    font-size: 1.45rem;
+}
+
+.publico-card h3 {
+    margin-bottom: 16px;
+    color: #ffffff;
+    font-size: 1.28rem;
+    font-weight: 800;
+    line-height: 1.25;
+    letter-spacing: -0.025em;
+}
+
+.publico-card p {
+    margin: 0;
+    color: #a7a7a7;
+    font-size: 0.88rem;
+    line-height: 1.75;
+}
+
+
+/* ==================================================
+   MÉTODO NICOLAS CARELI
+================================================== */
+
+.metodo-aulas {
+    position: relative;
+    padding: 120px 0;
+    overflow: hidden;
+    background: #f5f2ec;
+}
+
+.metodo-aulas-titulo {
+    max-width: 720px;
+    margin-bottom: 24px;
+    color: #111111;
+    font-size: clamp(2.2rem, 4vw, 4rem);
+    font-weight: 800;
+    line-height: 1.08;
+    letter-spacing: -0.045em;
+}
+
+.metodo-aulas-texto {
+    max-width: 650px;
+    margin-bottom: 42px;
+    color: #676767;
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+.metodo-lista {
+    display: grid;
+    gap: 18px;
+}
+
+.metodo-item {
+    display: grid;
+    grid-template-columns: 52px 1fr;
+    gap: 18px;
+    padding: 22px 0;
+    border-bottom: 1px solid rgba(17, 17, 17, 0.1);
+}
+
+.metodo-numero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    color: #8d6a38;
+    border: 1px solid rgba(141, 106, 56, 0.2);
+    border-radius: 14px;
+    background: rgba(202, 167, 106, 0.1);
+    font-size: 0.7rem;
+    font-weight: 900;
+}
+
+.metodo-item h3 {
+    margin-bottom: 8px;
+    color: #111111;
+    font-size: 1.05rem;
+    font-weight: 800;
+}
+
+.metodo-item p {
+    margin: 0;
+    color: #707070;
+    font-size: 0.88rem;
+    line-height: 1.7;
+}
+
+.metodo-visual {
+    position: relative;
+    padding-left: 30px;
+}
+
+.metodo-painel {
+    position: relative;
+    z-index: 2;
+    padding: 42px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 28px;
+    background: radial-gradient( circle at 100% 0%, rgba(202, 167, 106, 0.18), transparent 34%), #111111;
+    box-shadow: 0 32px 70px rgba(17, 17, 17, 0.2);
+}
+
+.metodo-painel-etiqueta {
+    display: inline-block;
+    margin-bottom: 30px;
+    color: var(--aulas-dourado-claro);
+    font-size: 0.7rem;
+    font-weight: 800;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+.metodo-painel-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.metodo-painel-item {
+    min-height: 180px;
+    padding: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.04);
+}
+
+.metodo-painel-item i {
+    display: block;
+    margin-bottom: 32px;
+    color: var(--aulas-dourado-claro);
+    font-size: 1.5rem;
+}
+
+.metodo-painel-item strong {
+    display: block;
+    margin-bottom: 8px;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 800;
+}
+
+.metodo-painel-item span {
+    display: block;
+    color: #a9a9a9;
+    font-size: 0.78rem;
+    line-height: 1.55;
+}
+
+.metodo-frase {
+    position: relative;
+    z-index: 3;
+    width: 78%;
+    margin: -36px 0 0 auto;
+    padding: 30px;
+    border: 1px solid rgba(17, 17, 17, 0.1);
+    border-radius: 22px;
+    background: #ffffff;
+    box-shadow: 0 22px 50px rgba(17, 17, 17, 0.14);
+}
+
+.metodo-frase i {
+    display: block;
+    margin-bottom: 12px;
+    color: #a47d42;
+    font-size: 2rem;
+}
+
+.metodo-frase p {
+    margin-bottom: 14px;
+    color: #242424;
+    font-size: 0.92rem;
+    font-weight: 600;
+    line-height: 1.7;
+}
+
+.metodo-frase span {
+    color: #8d6a38;
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+
+/* ==================================================
+   PLANOS
+================================================== */
+
+.planos-aulas {
+    padding: 120px 0;
+    background: #111;
+}
+
+.planos-cabecalho {
+    max-width: 700px;
+    margin: auto;
+    margin-bottom: 70px;
+    text-align: center;
+}
+
+.planos-cabecalho h2 {
+    color: #fff;
+    font-size: clamp(2.3rem, 4vw, 4rem);
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.planos-cabecalho p {
+    color: #aaa;
+    line-height: 1.8;
+}
+
+.plano-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 45px;
+    border-radius: 28px;
+    background: #1a1a1a;
+    border: 1px solid rgba(255, 255, 255, .08);
+    transition: .35s;
+}
+
+.plano-card:hover {
+    transform: translateY(-8px);
+}
+
+.plano-destaque {
+    border: 2px solid #caa76a;
+    transform: scale(1.04);
+}
+
+.plano-destaque:hover {
+    transform: scale(1.04) translateY(-8px);
+}
+
+.plano-badge {
+    position: absolute;
+    top: -14px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 8px 18px;
+    border-radius: 100px;
+    background: #caa76a;
+    color: #111;
+    font-size: .7rem;
+    font-weight: 800;
+}
+
+.plano-tipo {
+    color: #caa76a;
+    text-transform: uppercase;
+    font-size: .8rem;
+    letter-spacing: .15em;
+    font-weight: 700;
+}
+
+.plano-card h3 {
+    margin: 18px 0 5px;
+    color: #fff;
+    font-size: 2.5rem;
+    font-weight: 900;
+}
+
+.plano-subtitulo {
+    color: #999;
+    margin-bottom: 35px;
+}
+
+.plano-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 40px;
+}
+
+.plano-card li {
+    color: #ddd;
+    margin-bottom: 15px;
+}
+
+.btn-plano {
+    margin-top: auto;
+    display: block;
+    text-align: center;
+    padding: 16px;
+    border-radius: 100px;
+    background: #caa76a;
+    color: #111;
+    font-weight: 800;
+    text-decoration: none;
+    transition: .3s;
+}
+
+.btn-plano:hover {
+    background: #e0c28e;
+    color: #111;
+}
+
+
+/* ==================================================
+   APOSTILA DIGITAL
+================================================== */
+
+.apostila-aulas {
+    position: relative;
+    padding: 120px 0;
+    overflow: hidden;
+    background: #f5f2ec;
+}
+
+.apostila-visual {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+}
+
+.apostila-capa {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 100%;
+    max-width: 370px;
+    min-height: 510px;
+    padding: 42px;
+    overflow: hidden;
+    color: #ffffff;
+    border-radius: 12px 28px 28px 12px;
+    background: radial-gradient( circle at 80% 15%, rgba(224, 194, 142, 0.3), transparent 32%), linear-gradient( 145deg, #0a0a0a, #222222);
+    box-shadow: -15px 20px 0 #caa76a, 0 35px 70px rgba(17, 17, 17, 0.25);
+    transform: rotate(-3deg);
+}
+
+.apostila-capa::before {
+    position: absolute;
+    top: 0;
+    left: 18px;
+    width: 1px;
+    height: 100%;
+    content: "";
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.apostila-capa-etiqueta {
+    position: absolute;
+    top: 38px;
+    left: 42px;
+    color: var(--aulas-dourado-claro);
+    font-size: 0.68rem;
+    font-weight: 800;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+}
+
+.apostila-capa i {
+    margin-bottom: auto;
+    color: var(--aulas-dourado-claro);
+    font-size: 4rem;
+}
+
+.apostila-capa h3 {
+    max-width: 280px;
+    margin-bottom: 18px;
+    font-size: 2.3rem;
+    font-weight: 800;
+    line-height: 1.05;
+    letter-spacing: -0.04em;
+}
+
+.apostila-capa p {
+    margin: 0;
+    color: #b9b9b9;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.apostila-formato {
+    position: absolute;
+    right: 15px;
+    bottom: 65px;
+    padding: 11px 17px;
+    color: #111111;
+    border-radius: 999px;
+    background: var(--aulas-dourado-claro);
+    font-size: 0.7rem;
+    font-weight: 900;
+    letter-spacing: 0.08em;
+}
+
+.apostila-titulo {
+    max-width: 720px;
+    margin-bottom: 24px;
+    color: #111111;
+    font-size: clamp(2.2rem, 4vw, 4rem);
+    font-weight: 800;
+    line-height: 1.08;
+    letter-spacing: -0.045em;
+}
+
+.apostila-texto {
+    max-width: 680px;
+    margin-bottom: 38px;
+    color: #666666;
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+.apostila-beneficios {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+    margin-bottom: 38px;
+}
+
+.apostila-beneficio {
+    display: flex;
+    gap: 14px;
+    padding: 20px;
+    border: 1px solid rgba(17, 17, 17, 0.09);
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.65);
+}
+
+.apostila-beneficio i {
+    color: #9a7640;
+    font-size: 1.4rem;
+}
+
+.apostila-beneficio strong {
+    display: block;
+    margin-bottom: 6px;
+    color: #161616;
+    font-size: 0.88rem;
+    font-weight: 800;
+}
+
+.apostila-beneficio span {
+    display: block;
+    color: #737373;
+    font-size: 0.78rem;
+    line-height: 1.5;
+}
+
+.apostila-compra {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    padding: 26px;
+    border-radius: 22px;
+    background: #111111;
+}
+
+.apostila-preco span {
+    display: block;
+    margin-bottom: 5px;
+    color: #999999;
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.apostila-preco strong {
+    color: #ffffff;
+    font-size: 1.35rem;
+    font-weight: 800;
+}
+
+.btn-apostila {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    min-height: 52px;
+    padding: 0 24px;
+    color: #111111;
+    border-radius: 999px;
+    background: var(--aulas-dourado-claro);
+    font-size: 0.78rem;
+    font-weight: 800;
+    text-decoration: none;
+    transition: transform 0.25s ease, background 0.25s ease;
+}
+
+.btn-apostila:hover {
+    color: #111111;
+    background: #efd19c;
+    transform: translateY(-3px);
+}
+
+.apostila-observacao {
+    margin: 16px 0 0;
+    color: #777777;
+    font-size: 0.75rem;
+}
+
+
+/* ==================================================
+   SOBRE O PROFESSOR
+================================================== */
+
+.professor-aulas {
+    position: relative;
+    padding: 120px 0;
+    overflow: hidden;
+    background: #111111;
+}
+
+.professor-visual {
+    position: relative;
+    max-width: 470px;
+    margin: 0 auto;
+}
+
+.professor-foto {
+    position: relative;
+    overflow: hidden;
+    min-height: 620px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 30px;
+    background: linear-gradient( 145deg, #272727, #161616);
+}
+
+.professor-foto img {
+    display: block;
+    width: 100%;
+    height: 620px;
+    object-fit: cover;
+    object-position: center top;
+}
+
+.professor-experiencia {
+    position: absolute;
+    right: -28px;
+    bottom: 42px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    max-width: 230px;
+    padding: 22px 25px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 20px;
+    background: rgba(20, 20, 20, 0.92);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(16px);
+}
+
+.professor-experiencia strong {
+    color: var(--aulas-dourado-claro);
+    font-size: 2rem;
+    font-weight: 900;
+    line-height: 1;
+}
+
+.professor-experiencia span {
+    color: #d0d0d0;
+    font-size: 0.72rem;
+    font-weight: 700;
+    line-height: 1.45;
+}
+
+.professor-titulo {
+    max-width: 720px;
+    margin-bottom: 26px;
+    color: #ffffff;
+    font-size: clamp(2.2rem, 4vw, 4rem);
+    font-weight: 800;
+    line-height: 1.08;
+    letter-spacing: -0.045em;
+}
+
+.professor-texto {
+    max-width: 720px;
+    margin-bottom: 18px;
+    color: #aaaaaa;
+    font-size: 0.95rem;
+    line-height: 1.8;
+}
+
+.professor-destaques {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin: 36px 0;
+}
+
+.professor-destaque {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.09);
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.035);
+}
+
+.professor-destaque i {
+    color: var(--aulas-dourado-claro);
+    font-size: 1.3rem;
+}
+
+.professor-destaque strong {
+    display: block;
+    margin-bottom: 5px;
+    color: #ffffff;
+    font-size: 0.85rem;
+    font-weight: 800;
+}
+
+.professor-destaque span {
+    display: block;
+    color: #929292;
+    font-size: 0.74rem;
+    line-height: 1.5;
+}
+
+.btn-professor {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    min-height: 54px;
+    padding: 0 27px;
+    color: #111111;
+    border-radius: 999px;
+    background: var(--aulas-dourado-claro);
+    font-size: 0.78rem;
+    font-weight: 800;
+    text-decoration: none;
+    transition: transform 0.25s ease, background 0.25s ease;
+}
+
+.btn-professor:hover {
+    color: #111111;
+    background: #efd19c;
+    transform: translateY(-3px);
+}
+
+
+/* ==================================================
+   PERGUNTAS FREQUENTES
+================================================== */
+
+.faq-aulas {
+    position: relative;
+    padding: 120px 0;
+    overflow: hidden;
+    background: #f5f2ec;
+}
+
+.faq-intro {
+    position: sticky;
+    top: 130px;
+}
+
+.faq-titulo {
+    max-width: 520px;
+    margin-bottom: 24px;
+    color: #111111;
+    font-size: clamp(2.2rem, 4vw, 4rem);
+    font-weight: 800;
+    line-height: 1.08;
+    letter-spacing: -0.045em;
+}
+
+.faq-texto {
+    max-width: 480px;
+    margin-bottom: 30px;
+    color: #696969;
+    font-size: 0.95rem;
+    line-height: 1.8;
+}
+
+.btn-faq {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    min-height: 52px;
+    padding: 0 25px;
+    color: #ffffff;
+    border-radius: 999px;
+    background: #111111;
+    font-size: 0.78rem;
+    font-weight: 800;
+    text-decoration: none;
+    transition: transform 0.25s ease, background 0.25s ease;
+}
+
+.btn-faq:hover {
+    color: #111111;
+    background: var(--aulas-dourado-claro);
+    transform: translateY(-3px);
+}
+
+.faq-accordion {
+    display: grid;
+    gap: 14px;
+}
+
+.faq-accordion .accordion-item {
+    overflow: hidden;
+    border: 1px solid rgba(17, 17, 17, 0.1);
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.68);
+}
+
+.faq-accordion .accordion-button {
+    padding: 23px 26px;
+    color: #1a1a1a;
+    background: transparent;
+    box-shadow: none;
+    font-size: 0.96rem;
+    font-weight: 800;
+}
+
+.faq-accordion .accordion-button:not(.collapsed) {
+    color: #8d6a38;
+    background: transparent;
+}
+
+.faq-accordion .accordion-button:focus {
+    border-color: transparent;
+    box-shadow: none;
+}
+
+.faq-accordion .accordion-button::after {
+    width: 38px;
+    height: 38px;
+    margin-left: 20px;
+    border-radius: 50%;
+    background-color: rgba(202, 167, 106, 0.14);
+    background-position: center;
+    background-size: 15px;
+}
+
+.faq-accordion .accordion-body {
+    padding: 0 26px 25px;
+    color: #696969;
+    font-size: 0.88rem;
+    line-height: 1.8;
+}
+
+
+/* ==================================================
+   CTA FINAL
+================================================== */
+
+.cta-final-aulas {
+    position: relative;
+    padding: 120px 0;
+    overflow: hidden;
+    background: #111111;
+}
+
+.cta-final-box {
+    position: relative;
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 90px 60px;
+    overflow: hidden;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 36px;
+    background: radial-gradient( circle at 10% 20%, rgba(202, 167, 106, 0.18), transparent 28%), radial-gradient( circle at 90% 80%, rgba(202, 167, 106, 0.12), transparent 30%), #181818;
+}
+
+.cta-final-box::before {
+    position: absolute;
+    top: -150px;
+    left: 50%;
+    width: 420px;
+    height: 420px;
+    content: "";
+    border-radius: 50%;
+    background: rgba(202, 167, 106, 0.08);
+    filter: blur(80px);
+    transform: translateX(-50%);
+}
+
+.cta-final-box>* {
+    position: relative;
+    z-index: 2;
+}
+
+.cta-final-box h2 {
+    max-width: 850px;
+    margin: 0 auto 24px;
+    color: #ffffff;
+    font-size: clamp(2.5rem, 5vw, 5rem);
+    font-weight: 850;
+    line-height: 1.02;
+    letter-spacing: -0.055em;
+}
+
+.cta-final-box p {
+    max-width: 680px;
+    margin: 0 auto 36px;
+    color: #aaaaaa;
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+.cta-final-acoes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    margin-bottom: 38px;
+}
+
+.btn-cta-principal,
+.btn-cta-secundario {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    min-height: 56px;
+    padding: 0 28px;
+    border-radius: 999px;
+    font-size: 0.8rem;
+    font-weight: 800;
+    text-decoration: none;
+    transition: transform 0.25s ease, background 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+}
+
+.btn-cta-principal {
+    color: #111111;
+    background: var(--aulas-dourado-claro);
+}
+
+.btn-cta-principal:hover {
+    color: #111111;
+    background: #efd19c;
+    transform: translateY(-3px);
+}
+
+.btn-cta-secundario {
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    background: rgba(255, 255, 255, 0.04);
+}
+
+.btn-cta-secundario:hover {
+    color: #ffffff;
+    border-color: rgba(202, 167, 106, 0.5);
+    background: rgba(202, 167, 106, 0.1);
+    transform: translateY(-3px);
+}
+
+.cta-final-detalhes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 28px;
+    flex-wrap: wrap;
+}
+
+.cta-final-detalhes span {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #bcbcbc;
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+.cta-final-detalhes i {
+    color: var(--aulas-dourado-claro);
+}
+
+
+/* ==================================================
+   RODAPÉ
+================================================== */
+
+.footer-aulas {
+    padding: 80px 0 30px;
+    background: #090909;
+}
+
+.footer-aulas-topo {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    gap: 60px;
+    padding-bottom: 55px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.footer-aulas-logo {
+    display: inline-block;
+    margin-bottom: 18px;
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: 900;
+    letter-spacing: -0.04em;
+    text-decoration: none;
+}
+
+.footer-aulas-logo:hover {
+    color: var(--aulas-dourado-claro);
+}
+
+.footer-aulas-marca p {
+    max-width: 420px;
+    margin: 0;
+    color: #858585;
+    font-size: 0.86rem;
+    line-height: 1.75;
+}
+
+.footer-aulas-links {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+}
+
+.footer-aulas-links div {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footer-aulas-links strong {
+    margin-bottom: 8px;
+    color: #ffffff;
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.footer-aulas-links a {
+    color: #888888;
+    font-size: 0.82rem;
+    text-decoration: none;
+    transition: color 0.25s ease, transform 0.25s ease;
+}
+
+.footer-aulas-links a:hover {
+    color: var(--aulas-dourado-claro);
+    transform: translateX(4px);
+}
+
+.footer-aulas-base {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    padding-top: 28px;
+}
+
+.footer-aulas-base p {
+    margin: 0;
+    color: #666666;
+    font-size: 0.72rem;
+}
+
+.footer-aulas-base a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #8d8d8d;
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.footer-aulas-base a:hover {
+    color: var(--aulas-dourado-claro);
+}
+
+
+/* ==================================================
+   FORMULÁRIO DE INTERESSE
+================================================== */
+
+.formulario-aulas {
+    position: relative;
+    padding: 120px 0;
+    overflow: hidden;
+    background: #111111;
+}
+
+.formulario-aulas::before {
+    position: absolute;
+    top: -180px;
+    right: -180px;
+    width: 520px;
+    height: 520px;
+    content: "";
+    border-radius: 50%;
+    background: rgba(202, 167, 106, 0.08);
+    filter: blur(90px);
+}
+
+.formulario-aulas-titulo {
+    max-width: 580px;
+    margin-bottom: 24px;
+    color: #ffffff;
+    font-size: clamp(2.2rem, 4vw, 4rem);
+    font-weight: 800;
+    line-height: 1.08;
+    letter-spacing: -0.045em;
+}
+
+.formulario-aulas-texto {
+    max-width: 530px;
+    margin-bottom: 32px;
+    color: #a4a4a4;
+    font-size: 0.96rem;
+    line-height: 1.8;
+}
+
+.formulario-aulas-destaques {
+    display: grid;
+    gap: 15px;
+}
+
+.formulario-aulas-destaques span {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #cccccc;
+    font-size: 0.82rem;
+    font-weight: 700;
+}
+
+.formulario-aulas-destaques i {
+    color: var(--aulas-dourado-claro);
+}
+
+.formulario-aulas-box {
+    position: relative;
+    padding: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 28px;
+    background: rgba(255, 255, 255, 0.045);
+    box-shadow: 0 30px 70px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(14px);
+}
+
+.formulario-aulas-box label {
+    display: block;
+    margin-bottom: 9px;
+    color: #d8d8d8;
+    font-size: 0.75rem;
+    font-weight: 800;
+}
+
+.formulario-aulas-box label span {
+    margin-left: 5px;
+    color: #777777;
+    font-size: 0.68rem;
+    font-weight: 600;
+}
+
+.formulario-aulas-box input,
+.formulario-aulas-box select,
+.formulario-aulas-box textarea {
+    width: 100%;
+    padding: 15px 16px;
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 14px;
+    outline: none;
+    background: rgba(255, 255, 255, 0.055);
+    font-size: 0.86rem;
+    transition: border-color 0.25s ease, background 0.25s ease, box-shadow 0.25s ease;
+}
+
+.formulario-aulas-box input::placeholder,
+.formulario-aulas-box textarea::placeholder {
+    color: #717171;
+}
+
+.formulario-aulas-box select {
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.055);
+    cursor: pointer;
+}
+
+.formulario-aulas-box select option {
+    color: #ffffff;
+    background-color: #222222;
+}
+
+.formulario-aulas-box select:invalid {
+    color: #8a8a8a;
+}
+
+.formulario-aulas-box textarea {
+    min-height: 140px;
+    resize: vertical;
+}
+
+.formulario-aulas-box input:focus,
+.formulario-aulas-box select:focus,
+.formulario-aulas-box textarea:focus {
+    border-color: rgba(202, 167, 106, 0.75);
+    background: rgba(255, 255, 255, 0.075);
+    box-shadow: 0 0 0 4px rgba(202, 167, 106, 0.1);
+}
+
+.formulario-check {
+    display: flex;
+    align-items: flex-start;
+    gap: 11px;
+}
+
+.formulario-check input {
+    flex: 0 0 auto;
+    width: 18px;
+    height: 18px;
+    margin-top: 2px;
+    accent-color: var(--aulas-dourado-claro);
+}
+
+.formulario-check label {
+    margin: 0;
+    color: #aaaaaa;
+    font-size: 0.74rem;
+    font-weight: 500;
+    line-height: 1.6;
+}
+
+.formulario-privacidade {
+    margin: 0;
+    color: #747474;
+    font-size: 0.69rem;
+    line-height: 1.6;
+}
+
+.btn-enviar-formulario {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 11px;
+    width: 100%;
+    min-height: 56px;
+    padding: 0 26px;
+    color: #111111;
+    border: 0;
+    border-radius: 999px;
+    background: var(--aulas-dourado-claro);
+    font-size: 0.8rem;
+    font-weight: 900;
+    cursor: pointer;
+    transition: transform 0.25s ease, background 0.25s ease;
+}
+
+.btn-enviar-formulario:hover {
+    background: #efd19c;
+    transform: translateY(-3px);
+}
+
+.btn-enviar-formulario:disabled {
+    cursor: not-allowed;
+    opacity: 0.65;
+    transform: none;
+}
+
+.campo-oculto {
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+.formulario-retorno {
+    display: none;
+    margin-top: 20px;
+    padding: 15px 18px;
+    border-radius: 14px;
+    font-size: 0.78rem;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+.formulario-retorno.sucesso {
+    display: block;
+    color: #d9f5df;
+    border: 1px solid rgba(83, 190, 106, 0.3);
+    background: rgba(83, 190, 106, 0.1);
+}
+
+.formulario-retorno.erro {
+    display: block;
+    color: #ffd6d6;
+    border: 1px solid rgba(224, 93, 93, 0.3);
+    background: rgba(224, 93, 93, 0.1);
+}
+
+
+/* ==================================================
+   MOBILE
+================================================== */
+
+@media (max-width: 991px) {
+    .navbar-aulas {
+        position: relative;
+        background: #080808;
+    }
+    .navbar-aulas .navbar-collapse {
+        margin-top: 18px;
+        padding: 18px;
+        border: 1px solid var(--aulas-borda);
+        border-radius: 16px;
+        background: #101010;
+    }
+    .navbar-aulas .nav-link {
+        margin-left: 0;
+        padding: 10px 0;
+    }
+    .hero-aulas {
+        min-height: auto;
+        padding: 70px 0 0;
+    }
+    .hero-aulas .row {
+        min-height: auto !important;
+    }
+    .hero-aulas-imagem {
+        min-height: 520px;
+        margin-top: 40px;
+    }
+}
+
+@media (max-width: 767px) {
+    .hero-aulas {
+        padding-top: 55px;
+    }
+    .hero-aulas-titulo {
+        font-size: 2.65rem;
+    }
+    .hero-aulas-texto {
+        font-size: 0.95rem;
+    }
+    .hero-aulas-botoes {
+        flex-direction: column;
+    }
+    .btn-aulas-principal,
+    .btn-aulas-secundario {
+        width: 100%;
+    }
+    .hero-aulas-beneficios {
+        flex-direction: column;
+        gap: 12px;
+    }
+    .hero-aulas-imagem {
+        min-height: 430px;
+    }
+    .hero-aulas-imagem::before {
+        width: 300px;
+        height: 300px;
+    }
+    .hero-aulas-experiencia {
+        right: 0;
+        bottom: 30px;
+    }
+    .formas-aprender {
+        padding: 80px 0;
+    }
+    .formas-cabecalho {
+        margin-bottom: 40px;
+        text-align: left;
+    }
+    .forma-card {
+        min-height: auto;
+        padding: 30px 26px;
+    }
+    .forma-status {
+        top: 30px;
+        right: 26px;
+    }
+    .publico-aulas {
+        padding: 80px 0;
+    }
+    .publico-aulas-intro {
+        margin: 22px 0 0;
+    }
+    .publico-card {
+        min-height: 300px;
+        padding: 28px;
+    }
+    .publico-icone {
+        margin-bottom: 46px;
+    }
+    .metodo-aulas {
+        padding: 80px 0;
+    }
+    .metodo-visual {
+        padding-left: 0;
+    }
+    .metodo-painel {
+        padding: 28px 22px;
+    }
+    .metodo-painel-grid {
+        grid-template-columns: 1fr;
+    }
+    .metodo-painel-item {
+        min-height: auto;
+    }
+    .metodo-frase {
+        width: 92%;
+        margin-top: -24px;
+    }
+    .apostila-aulas {
+        padding: 80px 0;
+    }
+    .apostila-visual {
+        padding: 10px 18px 35px;
+    }
+    .apostila-capa {
+        min-height: 440px;
+        padding: 34px;
+    }
+    .apostila-capa h3 {
+        font-size: 2rem;
+    }
+    .apostila-beneficios {
+        grid-template-columns: 1fr;
+    }
+    .apostila-compra {
+        align-items: stretch;
+        flex-direction: column;
+    }
+    .btn-apostila {
+        width: 100%;
+    }
+    .apostila-formato {
+        right: 0;
+    }
+    .professor-aulas {
+        padding: 80px 0;
+    }
+    .professor-foto {
+        min-height: 480px;
+    }
+    .professor-foto img {
+        height: 480px;
+    }
+    .professor-experiencia {
+        right: 12px;
+        bottom: 18px;
+    }
+    .professor-destaques {
+        grid-template-columns: 1fr;
+    }
+    .faq-aulas {
+        padding: 80px 0;
+    }
+    .faq-intro {
+        position: static;
+    }
+    .faq-accordion .accordion-button {
+        padding: 21px 20px;
+        font-size: 0.9rem;
+    }
+    .faq-accordion .accordion-body {
+        padding: 0 20px 22px;
+    }
+    .cta-final-aulas {
+        padding: 80px 0;
+    }
+    .cta-final-box {
+        padding: 65px 24px;
+        border-radius: 26px;
+    }
+    .cta-final-acoes {
+        align-items: stretch;
+        flex-direction: column;
+    }
+    .btn-cta-principal,
+    .btn-cta-secundario {
+        width: 100%;
+    }
+    .cta-final-detalhes {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 14px;
+        width: fit-content;
+        margin: 0 auto;
+    }
+    .footer-aulas {
+        padding-top: 65px;
+    }
+    .footer-aulas-topo {
+        grid-template-columns: 1fr;
+        gap: 42px;
+    }
+    .footer-aulas-base {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+    .footer-aulas-links {
+        gap: 25px;
+    }
+    .formulario-aulas {
+        padding: 80px 0;
+    }
+    .formulario-aulas-box {
+        padding: 28px 20px;
+        border-radius: 22px;
+    }
+}
